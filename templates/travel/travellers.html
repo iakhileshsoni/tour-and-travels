@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <title>Show Employees</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="{%static 'images/akki.png'%}" type="image/icon type">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>    <style type="text/css">
+      body{
+        background: url(https://images.unsplash.com/photo-1484821582734-6c6c9f99a672?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=891&q=80);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: lightgreen;
+        color: white;
+      }
+      th{
+        text-align: center;
+        font-size: 20px;
+        color: red;
+      }
+      td{
+        text-align: center;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 align="center">Traveller List</h2>
+    {% if travellers %}
+    <table class="table table-bordered">
+      <thead>
+          <th>S.No.</th>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Gender</th>
+          <th>Photo</th>
+          <!-- <th>DOB</th> -->
+          <th>Email</th>
+      </thead>
+      {% for trvls in travellers %}
+      <tr>
+          <td>{{trvls.id}}</td>
+          <td>{{trvls.firstname}}</td>
+          <td>{{trvls.lastname}}</td>
+          <td>{{trvls.gender}}</td>
+          <!-- Access the image from the media folder -->
+          <td><img src="{{trvls.image.url}}" height="120" width="200" alt="No images found"></td>
+          <!-- <td>{{trvls.dob}}</td> -->
+          <td>{{trvls.email}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}
+      <h3> No employees found in Database </h3>
+    {% endif %}
+  </body>
+</html>
