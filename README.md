@@ -9,3 +9,5 @@ In this project basically I have covered all the useful features using the MVT s
 I have created form for registration, login, logout, show_records from the database(MySQL).
 
 At the end I have done some validation stuff but still few functionalities need to be added that I am working on in development mode.
+
+Hope it will help to the beginners for getting started their own projects.
