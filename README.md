@@ -2,7 +2,7 @@
 
 This is my another project in Python/Django. 
 
-I have used technologies like -  HTML5, CSS3, Bootsrtap, JavaScript, Pillow library of Python for working with images.
+I have used technologies such as -  HTML5, CSS3, Bootsrtap, JavaScript, Pillow library of Python for working with images.
 
 In this project basically I have covered all the useful features using the MVT structure that Django follows.
 
